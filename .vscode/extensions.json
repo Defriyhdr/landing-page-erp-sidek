@@ -1,0 +1,33 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "antfu.where-am-i",
+    "antfu.icons-carbon",
+    "antfu.theme-vitesse",
+    "file-icons.file-icons",
+    "sainnhe.gruvbox-material",
+    "dbaeumer.vscode-eslint",
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "material-icon-theme.folders.associations": {
+    "landing": "global",
+    "central": "client",
+    "super": "admin",
+    "operational": "client",
+    "ui": "theme",
+    "dev": "tools",
+    "stores": "vuex-store",
+    "composeables": "controller",
+    "berry": "template"
+  },
+  "material-icon-theme.files.associations": {
+    "**.store.ts": "vuex-store",
+    "**.store.js": "vuex-store",
+    "**.feature.ts": "vuex-store",
+    "**.feature.js": "vuex-store",
+    "**.api.ts": "vuex-store",
+    "**.api.js": "vuex-store",
+  }
+}

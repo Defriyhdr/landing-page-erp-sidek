@@ -1,0 +1,45 @@
+html {
+  .bg-success {
+    color: white !important;
+  }
+}
+
+
+th {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.vue3-easy-data-table__header tr th:first-child span {
+  justify-content: left !important;
+}
+.vue3-easy-data-table__body tr td:first-child{
+  text-align: left !important;
+}
+
+
+// OVERIDDE : INPUT MARGIN to vertically 14px or my-3
+.v-input {
+  margin-top: 14px !important;
+  margin-bottom: 14px !important;
+}
+
+
+// SCROLLBAR WINDOW
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #90a4ae;
+  border-radius: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #78909c;
+}
+
+.authbg {
+  background-color:rgb(239, 239, 239)
+}
