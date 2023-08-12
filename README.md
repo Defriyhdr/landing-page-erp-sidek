@@ -56,3 +56,8 @@ pnpm lint
 - if tunai => konfirmasi langsung pilih kas 
 - if kredit => konfirmasi tidak pilih kas , pelunasan pilih kas 
 - if sebagian => konfirmasi pilih kas , pelunasan pilih kas 
+
+
+# step to build 
+1. pnpm run build
+2. pnpx serve dist

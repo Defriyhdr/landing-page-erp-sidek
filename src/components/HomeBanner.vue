@@ -45,7 +45,6 @@ import { CircleCheckFilledIcon } from 'vue-tabler-icons';
         </v-list>
 
         <div data-aos="fade-up" data-aos-duration="1000" class="mt-8">
-          <!-- <v-btn :to="{ name: 'CENTRAL_AUTH_LOGIN' }" color="secondary" size="large">Hubungi Kami</v-btn> -->
         </div>
       </div>
     </v-col>

@@ -2,11 +2,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
 import Vuetify from 'vite-plugin-vuetify'
 import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
 import WebfontDownload from 'vite-plugin-webfont-dl'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
@@ -44,38 +41,12 @@ export default defineConfig(({ command, mode }) => ({
     splitVendorChunkPlugin(),
     Vue(),
     Vuetify({ autoImport: true, styles: command === 'serve' || mode === 'development' ? 'sass' : true, }),
-    Pages({
-      importMode: 'async',
-      dirs: [
-        { dir: 'src/apps/landing/pages/', baseRoute: '' },
-        { dir: 'src/apps/super/pages/', baseRoute: 'super' },
-        { dir: 'src/apps/central/pages/', baseRoute: 'central' },
-        // { dir: 'src/apps/operational/pages/', baseRoute: 'operational' }
-      ]
-    }),
-    Layouts({
-      layoutsDirs: 'src/shared/layouts',
-      defaultLayout: 'default',
-      importMode: () => 'async'
-    }),
     AutoImport({
-      imports: ['vue', 'vue-router', 'vue-i18n', 'vue/macros', '@vueuse/head', '@vueuse/core'],
+      imports: ['vue'],
       dts: 'src/auto-imports.d.ts',
       vueTemplate: true,
-      dirs: ['src/apps/**/composables', 'src/apps/**/stores']
     }),
-    Components({
-      extensions: ['vue'],
-      include: [/\.vue$/, /\.vue\?vue/],
-      deep: true,
-      dts: 'src/components.d.ts',
-      dirs: [
-        // 'src/apps/landing/components',
-        'src/apps/super/components',
-        'src/apps/central/components',
-        // 'src/apps/operational/components'
-      ]
-    }),
+    
     WebfontDownload([
       'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap'
     ])
@@ -93,7 +64,6 @@ export default defineConfig(({ command, mode }) => ({
   optimizeDeps: {
     include: [
       'vue',
-      'vue-router',
     ],
     exclude: ['vuetify'],
     entries: ['./src/**/*.vue']
