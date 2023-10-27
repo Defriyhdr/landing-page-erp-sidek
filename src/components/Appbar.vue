@@ -19,8 +19,8 @@ const drawer = ref(false);
         <!-- ---------------------------------------------- -->
         <template v-if="mdAndUp">
           <v-btn color="#000000" class="mr-4" variant="plain" to="/">Tentang Sidek ERP</v-btn>
-          <v-btn width="80" href="" variant="outlined" color="primary">Masuk</v-btn>
-          <v-btn width="80" href="" variant="flat" color="primary">Daftar</v-btn>
+          <v-btn width="80" href="" variant="outlined" color="primary">Login</v-btn>
+          <v-btn width="80" href="" variant="flat" color="primary">Sign Up</v-btn>
         </template>
         <template v-else>
           <v-btn color="lightsecondary" icon rounded="sm" variant="flat" size="small" @click="drawer = true">
@@ -35,8 +35,8 @@ const drawer = ref(false);
     <v-list color="primary">
 
       <v-list-item title="Tentang SIDEK-ERP" />
-      <v-list-item title="Masuk" />
-      <v-list-item title="Daftar" />
+      <v-list-item title="Login" />
+      <v-list-item title="Sign Up" />
 
     </v-list>
   </v-navigation-drawer>
